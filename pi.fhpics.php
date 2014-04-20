@@ -22,7 +22,7 @@ class Plugin_fhpics extends Plugin
 		$only = $this->fetchParam('only', null);
 		$exclude = $this->fetchParam('exclude', null);
 
-        $params = "photos?consumer_key=$consumer_key&feature=$feature&username=$user&sort=$sort&rpp=$count&image_size=$image_size&include_store=store_download&include_states=voted";
+        $params = "photos?consumer_key=$consumer_key&feature=$feature&username=$user&sort=$sort&rpp=$count&image_size=$image_size";
 	    if(isset($only)) 
 	    {
 	        $params .= '&only='.urlencode($only);
