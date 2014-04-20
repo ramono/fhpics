@@ -32,15 +32,13 @@ For more information on option values and response format please check https://g
 
 ### Sample
 	{{ fhpics:photo id="<photo_id>" image_size="3" comments="1" consumer_key="<your_key>" }}
-		<p><a href="http://www.500px.com{{ url }}"><img src="{{ image_url }}" alt="{{ name }}"></a></p>
-		<p>Description:  {{ description }}</p>
-		<p>{{ camera }} {{ shutter_speed }}s f{{ aperture }} ISO{{ iso }}</p>
-		Comments: 
-		<ul>
-			{{ comments }}
-			<li><a href="http://www.500px.com/{{ user.username }} ">{{ user.fullname }}</a>: {{ body }}</li>
-			{{ /comments }}
-		</ul>
+	<p><a href="http://www.500px.com{{ url }}"><img src="{{ image_url }}" alt="{{ name }}"></a></p>
+	<p>Description:  {{ description }} - {{ camera }} {{ shutter_speed }}s f{{ aperture }} ISO{{ iso }}</p>
+	<ul>
+		{{ comments }}
+		<li><a href="http://www.500px.com/{{ user.username }} ">{{ user.fullname }}</a>: {{ body }}</li>
+		{{ /comments }}
+	</ul>
 	{{ /fhpics:photo }}	
 
 For more information on option values for the individual photo, and response format please check https://github.com/500px/api-documentation/blob/master/endpoints/photo/GET_photos_id.md
