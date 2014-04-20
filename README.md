@@ -6,7 +6,7 @@ A Statamic plugin to pull photos from 500px. The plugin requires the use of a co
 ## Photo feed
 ### Options
 - consumer_key: Your API consumer key, (required).
-- feature: The type of photo stram to request, it default to user, (optional).
+- feature: The type of photo stream to request (user, fresh_today, popular, etc), it default to user, (optional).
 - user: username to pull photos from, (required only if feature is set to `user`, `user_friends` or `user_favorites`).
 - count: Amount of photos to request, defaults to 5, (optional).
 - image_size: size of the image to be shown, it defaults to 3 (280 x 280), (optional).
@@ -28,7 +28,7 @@ For more information on option values and response format please check https://g
 - consumer_key: Your API consumer key, (required).
 - id: ID of the image, (required).
 - image_size: size of the image to be shown, it defaults to 3 (280 x 280), (optional).
-- comments: Pull image comments, if omitted comments are not available, (optional).
+- comments: Pull image comments (1 or 2, not sure what the difference is), if omitted comments are not available, (optional).
 
 ### Sample
 	{{ fhpics:photo id="<photo_id>" image_size="3" comments="1" consumer_key="<your_key>" }}
